@@ -90,7 +90,7 @@ function Connect-Office365
 		Switch ($Item)
 		{
 			AzureAD {
-				If ($null -eq (Get-Module @getModuleSplat -Name "AzureAD"))
+				If ($null -eq (Get-Module @getModuleSplat -Name "AzureAD", "AzureADPreview"))
 				{
 					Write-Error "AzureAD Module is not present!"
 					continue
